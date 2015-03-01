@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{35500359-0CBA-4BFC-BAB6-319D14988AB9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>jQueryUploadTest</RootNamespace>
+    <AssemblyName>jQueryUploadTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <UseIISExpress>false</UseIISExpress>
+    <TargetFrameworkProfile />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="angularjs.html" />
+    <Content Include="basic-plus.html" />
+    <Content Include="basic.html" />
+    <Content Include="bin\jQueryUploadTest.dll" />
+    <Content Include="bin\jQueryUploadTest.pdb" />
+    <Content Include="cors\postmessage.html" />
+    <Content Include="cors\result.html" />
+    <Content Include="css\demo-ie8.css" />
+    <Content Include="css\demo.css" />
+    <Content Include="css\jquery.fileupload-noscript.css" />
+    <Content Include="css\jquery.fileupload-ui-noscript.css" />
+    <Content Include="css\jquery.fileupload-ui.css" />
+    <Content Include="css\jquery.fileupload.css" />
+    <Content Include="css\style.css" />
+    <Content Include="img\loading.gif" />
+    <Content Include="img\progressbar.gif" />
+    <Content Include="js\app.js" />
+    <Content Include="js\cors\jquery.postmessage-transport.js" />
+    <Content Include="js\cors\jquery.xdr-transport.js" />
+    <Content Include="js\JavaScript-Templates\tmpl.js" />
+    <Content Include="js\JavaScript-Templates\tmpl.min.js" />
+    <Content Include="js\jquery-1.11.1.js" />
+    <Content Include="js\jquery.fileupload-angular.js" />
+    <Content Include="js\jquery.fileupload-audio.js" />
+    <Content Include="js\jquery.fileupload-image.js" />
+    <Content Include="js\jquery.fileupload-jquery-ui.js" />
+    <Content Include="js\jquery.fileupload-process.js" />
+    <Content Include="js\jquery.fileupload-ui.js" />
+    <Content Include="js\jquery.fileupload-validate.js" />
+    <Content Include="js\jquery.fileupload-video.js" />
+    <Content Include="js\jquery.fileupload.js" />
+    <Content Include="js\jquery.iframe-transport.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\vendor\jquery.ui.widget.js" />
+    <Content Include="server\gae-go\static\favicon.ico" />
+    <Content Include="server\gae-go\static\robots.txt" />
+    <Content Include="server\gae-python\static\favicon.ico" />
+    <Content Include="server\gae-python\static\robots.txt" />
+    <Content Include="server\node\.gitignore" />
+    <Content Include="server\node\public\files\.gitignore" />
+    <Content Include="server\node\public\files\thumbnail\.gitignore" />
+    <Content Include="server\node\server.js" />
+    <Content Include="server\node\tmp\.gitignore" />
+    <Content Include="server\php\files\.gitignore" />
+    <Content Include="test\index.html" />
+    <Content Include="test\test.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FilesStatus.ashx.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Thumbnail.ashx.cs">
+      <DependentUpon>Thumbnail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="FileTransferHandler.ashx.cs">
+      <DependentUpon>FileTransferHandler.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FileTransferHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="img\default_thumb.jpg" />
+    <Content Include="Thumbnail.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AttachmentStorage\" />
+    <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="blueimp-file-upload.jquery.json" />
+    <Content Include="bower.json" />
+    <Content Include="CONTRIBUTING.md" />
+    <Content Include="server\gae-go\app.yaml" />
+    <Content Include="server\gae-go\app\main.go" />
+    <Content Include="server\gae-python\app.yaml" />
+    <Content Include="server\gae-python\main.py" />
+    <Content Include="server\node\package.json" />
+    <Content Include="server\php\files\.htaccess" />
+    <Content Include="server\php\index.php" />
+    <Content Include="server\php\UploadHandler.php" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56160</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
